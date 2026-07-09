@@ -8,8 +8,8 @@
     <style>
         :root {
             /* Paleta Premium Rosa & Dorado */
-            --rosa-bloque: rgba(255, 255, 255, 0.5);
-            --rosa-bloque-borde: rgba(212, 175, 55, 0.4); /* Bordes dorados suaves */
+            --rosa-bloque: rgba(255, 255, 255, 0.65); /* Más opacidad para mejorar lectura */
+            --rosa-bloque-borde: rgba(212, 175, 55, 0.4); 
             --text-deep: #4a2c35;
             --text-rose: #b35066;
             --text-muted: #8c606a;
@@ -43,8 +43,22 @@
         .delay-2 { transition-delay: 0.25s; }
         .delay-3 { transition-delay: 0.4s; }
         .delay-4 { transition-delay: 0.55s; }
+        .delay-5 { transition-delay: 0.7s; }
 
-        /* ====== SOBRE REDISEÑADO (CLARO) ====== */
+        /* ====== CLASES DE MEJORA DE LECTURA (DORADO) ====== */
+        .text-gold-clip {
+            background: var(--gold-grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            /* Sombra sutil oscura para separar del fondo brillante */
+            filter: drop-shadow(0px 2px 3px rgba(74, 44, 53, 0.3)); 
+        }
+        .text-gold-solid {
+            color: var(--gold-accent);
+            text-shadow: 0px 1px 3px rgba(74, 44, 53, 0.25);
+        }
+
+        /* ====== SOBRE REDISEÑADO ====== */
         #envelope-screen {
             position: fixed; top: 0; left: 0;
             width: 100%; height: 100%;
@@ -168,12 +182,12 @@
 
         body.content-active #main-invitation { opacity: 1; transform: translateY(0); }
 
-        /* ====== FRAME CON BRILLOS ====== */
+        /* ====== FRAME ====== */
         .invitation-frame {
             max-width: 500px; width: 100%;
             border: 1px solid rgba(255,255,255,0.9);
             padding: 50px 38px; text-align: center; position: relative;
-            background: rgba(255,255,255,0.45);
+            background: rgba(255,255,255,0.55);
             box-shadow: 0 25px 60px rgba(199,111,130,0.15), 0 0 0 1px rgba(255,255,255,0.6) inset;
             backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
             border-radius: 8px; overflow: visible;
@@ -183,7 +197,7 @@
             width: 240px; height: 320px; margin: 0 auto 30px auto;
             border-radius: 120px 120px 0 0; padding: 8px;
             background: rgba(255, 255, 255, 0.9);
-            border: 1px solid rgba(212,175,55,0.4); /* Toque dorado */
+            border: 1px solid rgba(212,175,55,0.4); 
             box-shadow: 0 15px 35px rgba(199,111,130,0.25);
         }
         .hero-photo {
@@ -205,7 +219,7 @@
             50% { opacity:1; transform:scale(1.1) rotate(20deg); }
         }
 
-        /* ====== TIPOGRAFÍA Y DORADOS ====== */
+        /* ====== TIPOGRAFÍA ====== */
         .section-heading {
             font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 28px; font-weight: 500;
             letter-spacing: 1px; color: var(--text-rose); text-transform: none; margin-bottom: 18px; line-height: 1.3;
@@ -219,14 +233,9 @@
             color: var(--text-rose); text-transform: none; margin-bottom: 14px; font-weight: 600;
         }
         
-        /* Nombre Festejada con efecto de oro */
         .main-title {
             font-family:'Pinyon Script',cursive; font-size: 72px; 
             margin-bottom: 15px; line-height: 0.9;
-            background: var(--gold-grad);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0px 4px 15px rgba(212,175,55,0.25);
         }
         
         .phrase { 
@@ -235,9 +244,6 @@
         }
         .family-names { 
             font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:600; font-style:italic; 
-            background: var(--gold-grad);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             line-height:1.4; margin-top:8px; 
         }
         
@@ -264,7 +270,7 @@
             box-shadow: 0 10px 30px rgba(199,111,130,0.12);
         }
 
-        /* ====== CALENDARIO CORREGIDO ====== */
+        /* ====== CALENDARIO ====== */
         .calendar-widget{
             margin-top: 22px; background: rgba(255,255,255,0.7); border: 1px solid rgba(212,175,55,0.4);
             border-radius: 18px; overflow: hidden; box-shadow: 0 8px 30px rgba(199,111,130,0.08);
@@ -274,7 +280,7 @@
             padding: 18px 20px 14px; text-align: center; color: var(--text-deep); position: relative;
         }
         .calendar-header::after{ content:''; position:absolute; left:0; bottom:0; width:100%; height:1px; background:rgba(212,175,55,0.3); }
-        .calendar-year{ font-family:'Cinzel',serif; font-size:11px; letter-spacing:5px; text-transform:uppercase; color: var(--gold-accent); font-weight: 600;}
+        .calendar-year{ font-family:'Cinzel',serif; font-size:11px; letter-spacing:5px; text-transform:uppercase; font-weight: 600;}
         .calendar-month{ margin-top:5px; font-family: 'Pinyon Script', cursive; font-size:40px; font-weight:400; color:var(--text-deep); line-height: 1; }
         .calendar-body{ padding: 18px 12px 20px; }
         .calendar-days-header{ display:grid; grid-template-columns:repeat(7,1fr); margin-bottom:12px; }
@@ -292,14 +298,14 @@
 
         .btn-accion {
             margin-top: 18px; width: 100%; border: 1px solid rgba(212,175,55,0.5); border-radius: 8px; padding: 15px 18px;
-            background: rgba(255,255,255,0.9); color: var(--gold-accent); display: flex; align-items: center; justify-content: center; gap: 10px;
+            background: rgba(255,255,255,0.9); display: flex; align-items: center; justify-content: center; gap: 10px;
             cursor: pointer; transition: .35s ease; font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 2px;
             text-transform: uppercase; font-weight: 600;
         }
         .btn-accion:hover { transform: translateY(-2px); background: #fff; box-shadow: 0 5px 15px rgba(212,175,55,0.25); }
         .btn-accion svg { width: 18px; height: 18px; fill: var(--gold-accent); flex-shrink: 0; }
 
-        /* ====== UBICACIONES EDITORIALES ====== */
+        /* ====== UBICACIONES ====== */
         .map-section {
             margin-bottom: 45px;
             text-align: center;
@@ -313,7 +319,7 @@
             font-style: italic; color: var(--text-deep); margin-bottom: 8px; line-height: 1.2;
         }
         .map-hora {
-            font-family: 'Cinzel', serif; font-size: 13px; color: var(--gold-accent); 
+            font-family: 'Cinzel', serif; font-size: 13px;  
             font-weight: 600; letter-spacing: 3px; margin-bottom: 15px;
         }
         .map-wrapper { 
@@ -335,7 +341,7 @@
         .rsvp-input-label { font-family:'Cinzel',serif; font-size:9px; letter-spacing:3px; color:var(--text-rose); text-transform:uppercase; font-weight:600; display:block; margin-bottom:8px; text-align: left; }
         .rsvp-input { 
             width:100%; padding:15px 18px; font-family:'Cormorant Garamond',serif; font-size:18px; font-style:italic; 
-            color:var(--text-deep); background:rgba(255,255,255,0.85); border:1px solid rgba(212,175,55,0.4); 
+            color:var(--text-deep); background:rgba(255,255,255,0.95); border:1px solid rgba(212,175,55,0.4); 
             border-radius:8px; outline:none; transition:all 0.3s ease; 
         }
         .rsvp-input:focus { border-color:var(--gold-accent); box-shadow:0 0 0 4px rgba(212,175,55,0.15); background: #fff; }
@@ -373,7 +379,7 @@
 
         .flower-petal { position:absolute; background-color:#ffccd5; border-radius:150% 0 150% 0; pointer-events:none; animation:float-up infinite ease-in; opacity:0; box-shadow: inset 0 0 10px rgba(255,255,255,0.5); }
 
-        .invitation-footer { font-family:'Cinzel',serif; font-size:10px; letter-spacing:4px; color:var(--gold-accent); margin-top:30px; font-weight:600; text-transform:uppercase; opacity: 0.9; }
+        .invitation-footer { font-family:'Cinzel',serif; font-size:10px; letter-spacing:4px; margin-top:30px; font-weight:600; text-transform:uppercase; opacity: 0.9; }
 
         @keyframes pulse { 0%,100%{opacity:0.6}50%{opacity:1} }
         @keyframes float-up { 0%{transform:translateY(0) translateX(0) rotate(0deg) scale(0.6);opacity:0}15%,85%{opacity:0.8}100%{transform:translateY(-100vh) translateX(60px) rotate(360deg) scale(1.2);opacity:0} }
@@ -392,7 +398,6 @@
         <svg id="music-icon" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
     </button>
 
-    <!-- PANTALLA SOBRE CLARO -->
     <div id="envelope-screen">
         <div id="env-stars"></div>
 
@@ -520,7 +525,6 @@
         <div class="hint-text">Toca para abrir</div>
     </div>
 
-    <!-- MAIN CONTENT -->
     <main id="main-invitation">
         <div id="lanterns-container" style="position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;pointer-events:none;z-index:1;"></div>
 
@@ -536,21 +540,21 @@
             </div>
 
             <div class="section-tag animate-in delay-2">Mis XV Años</div>
-            <h1 class="main-title animate-in delay-2">Alicee<br>Valentina</h1>
+            <h1 class="main-title text-gold-clip animate-in delay-3">Alicee<br>Valentina</h1>
             
-            <p class="phrase animate-in delay-3" style="margin-top: 20px;">
+            <p class="phrase animate-in delay-4" style="margin-top: 20px;">
                 "La vida está hecha de momentos que marcan el corazón. Hoy comienza un nuevo capítulo, y deseo compartirlo con las personas que más quiero."
             </p>
 
-            <div class="divider-ornate animate-in delay-3"><div class="divider-ornate-diamond"></div></div>
+            <div class="divider-ornate animate-in delay-5"><div class="divider-ornate-diamond"></div></div>
 
-            <div class="info-block animate-in delay-4">
-                <div class="info-label">Con la bendición de Dios y el inmenso amor de mi familia,</div>
-                <div class="family-names">Familia Sánchez Cortez</div>
+            <div class="info-block">
+                <div class="info-label animate-in delay-1">Con la bendición de Dios y el inmenso amor de mi familia,</div>
+                <div class="family-names text-gold-clip animate-in delay-2">Familia Sánchez Cortez</div>
             </div>
 
-            <div class="info-block animate-in">
-                <p class="phrase" style="font-size: 19px; margin-top: 15px;">
+            <div class="info-block">
+                <p class="phrase animate-in delay-3" style="font-size: 19px; margin-top: 15px;">
                     tengo el honor de invitarte a celebrar la alegría de mis XV Años.<br><br>
                     Acompáñame a vivir una noche llena de ilusiones, sonrisas y momentos inolvidables, donde agradeceré tu presencia al celebrar esta etapa tan especial de mi vida.
                 </p>
@@ -558,8 +562,8 @@
 
             <div class="divider-ornate animate-in"><div class="divider-ornate-diamond"></div></div>
 
-            <div class="section-heading-sm animate-in">Faltan</div>
-            <div class="countdown-grid animate-in delay-1" id="countdown-timer">
+            <div class="section-heading-sm animate-in delay-1">Faltan</div>
+            <div class="countdown-grid animate-in delay-2" id="countdown-timer">
                 <div class="countdown-item"><span class="countdown-number" id="days">00</span><span class="countdown-label">Días</span></div>
                 <div class="countdown-item"><span class="countdown-number" id="hours">00</span><span class="countdown-label">Hrs</span></div>
                 <div class="countdown-item"><span class="countdown-number" id="minutes">00</span><span class="countdown-label">Min</span></div>
@@ -568,13 +572,16 @@
 
             <div class="divider-ornate animate-in"><div class="divider-ornate-diamond"></div></div>
 
-            <div class="bloque-vidrio animate-in">
+            <div class="bloque-vidrio">
                 <div class="section-heading animate-in delay-1">Fecha</div>
                 <div style="font-family:'Cinzel',serif;font-size:32px;font-weight:400;color:var(--text-deep);letter-spacing:4px;" class="animate-in delay-2">24 · OCT · 2026</div>
-                <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--text-rose);margin-top:5px;" class="animate-in delay-2">Sábado</div>
+                <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--text-rose);margin-top:5px;" class="animate-in delay-3">Sábado</div>
                 
-                <div class="calendar-widget animate-in delay-3">
-                    <div class="calendar-header">2026 <div class="calendar-month">Octubre</div></div>
+                <div class="calendar-widget animate-in delay-4">
+                    <div class="calendar-header">
+                        <span class="calendar-year text-gold-solid">2026</span>
+                        <div class="calendar-month">Octubre</div>
+                    </div>
                     <div class="calendar-body">
                         <div class="calendar-days-header">
                             <span class="calendar-day-name">Dom</span><span class="calendar-day-name">Lun</span><span class="calendar-day-name">Mar</span><span class="calendar-day-name">Mié</span><span class="calendar-day-name">Jue</span><span class="calendar-day-name">Vie</span><span class="calendar-day-name">Sáb</span>
@@ -590,31 +597,33 @@
                     </div>
                 </div>
                 
-                <button class="btn-accion animate-in delay-4" onclick="addToCalendar()">
-                    <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5C3.89 3 3 3.9 3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 16H5V9h14v10zm0-12H5V5h14v2zM7 11h5v5H7z"/></svg>
-                    Agregar a mi Calendario
-                </button>
+                <div class="animate-in delay-5">
+                    <button class="btn-accion text-gold-solid" onclick="addToCalendar()">
+                        <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5C3.89 3 3 3.9 3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 16H5V9h14v10zm0-12H5V5h14v2zM7 11h5v5H7z"/></svg>
+                        Agregar a mi Calendario
+                    </button>
+                </div>
             </div>
 
             <div class="divider-ornate animate-in"><div class="divider-ornate-diamond"></div></div>
 
-            <div class="info-block animate-in">
+            <div class="info-block">
                 <div class="section-heading animate-in delay-1">Ubicaciones</div>
                 
-                <div class="map-section animate-in delay-2">
-                    <div class="map-tipo">Ceremonia</div>
-                    <div class="map-nombre">Asunción de María</div>
-                    <div class="map-hora">4:45 P.M.</div>
-                    <div class="map-wrapper">
+                <div class="map-section">
+                    <div class="map-tipo animate-in delay-2">Ceremonia</div>
+                    <div class="map-nombre animate-in delay-3">Asunción de María</div>
+                    <div class="map-hora text-gold-solid animate-in delay-4">4:45 P.M.</div>
+                    <div class="map-wrapper animate-in delay-5">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.3065736626945!2d-99.1146236!3d19.3124987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce019249651ee5%3A0x9d199266885f4c0e!2sParroquia%20de%20la%20Asunci%C3%B3n%20de%20Santa%20Mar%C3%ADa!5e0!3m2!1ses-419!2smx!4v1783549065300!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     </div>
                 </div>
                 
-                <div class="map-section animate-in delay-3" style="margin-top: 30px;">
-                    <div class="map-tipo">Recepción</div>
-                    <div class="map-nombre">Salón Eventos Mirage</div>
-                    <div class="map-hora">7:00 P.M.</div>
-                    <div class="map-wrapper">
+                <div class="map-section" style="margin-top: 30px;">
+                    <div class="map-tipo animate-in delay-1">Recepción</div>
+                    <div class="map-nombre animate-in delay-2">Salón Eventos Mirage</div>
+                    <div class="map-hora text-gold-solid animate-in delay-3">7:00 P.M.</div>
+                    <div class="map-wrapper animate-in delay-4">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.6701504046864!2d-99.11382599999999!3d19.296705300000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d21ce7601f431d%3A0xe32b5876f6c85bbb!2sEventos%20Mirage%20COAPA%2C%20S.A.%20De%20C.V.!5e0!3m2!1ses-419!2smx!4v1783549119705!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     </div>
                 </div>
@@ -622,7 +631,7 @@
 
             <div class="divider-ornate animate-in"><div class="divider-ornate-diamond"></div></div>
 
-            <div class="bloque-vidrio animate-in">
+            <div class="bloque-vidrio">
                 <div class="section-heading animate-in delay-1">Código de Vestimenta</div>
                 <div class="icon-circle animate-in delay-2">
                     <svg viewBox="0 0 24 24"><path d="M12 2L10 8h4l-2-6zM8 9l-2 6h12l-2-6H8zm-3 7v6h14v-6H5z"/></svg>
@@ -633,7 +642,7 @@
 
             <div class="divider-ornate animate-in"><div class="divider-ornate-diamond"></div></div>
 
-            <div class="bloque-vidrio animate-in">
+            <div class="bloque-vidrio">
                 <div class="section-heading animate-in delay-1">Lluvia de Sobres</div>
                 <div class="icon-circle animate-in delay-2">
                     <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
@@ -645,7 +654,7 @@
 
             <div class="divider-ornate animate-in"><div class="divider-ornate-diamond"></div></div>
 
-            <div class="bloque-vidrio animate-in">
+            <div class="bloque-vidrio">
                 <div class="section-heading animate-in delay-1">Cámara en Vivo</div>
                 <div class="icon-circle animate-in delay-2">
                     <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
@@ -653,39 +662,43 @@
                 <p class="rsvp-intro animate-in delay-3" style="margin-bottom: 25px;">
                     Ayúdame a capturar los mejores momentos. Toca el botón para subir tus fotos y videos durante el evento.
                 </p>
-                <a href="https://drive.google.com/drive/folders/1vb9BOazxJXZ_2wGzgl8jAwsPkSl1aj-x?usp=sharing" target="_blank" style="text-decoration: none;" class="animate-in delay-4">
-                    <button class="btn-primary">
-                        <svg viewBox="0 0 24 24"><path d="M19.35 10.04A7.49 7.49 0 0012 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 000 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
-                        Subir Fotos Aquí
-                    </button>
-                </a>
+                <div class="animate-in delay-4">
+                    <a href="https://drive.google.com/drive/folders/1vb9BOazxJXZ_2wGzgl8jAwsPkSl1aj-x?usp=sharing" target="_blank" style="text-decoration: none;">
+                        <button class="btn-primary">
+                            <svg viewBox="0 0 24 24"><path d="M19.35 10.04A7.49 7.49 0 0012 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 000 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
+                            Subir Fotos Aquí
+                        </button>
+                    </a>
+                </div>
             </div>
 
             <div class="divider-ornate animate-in"><div class="divider-ornate-diamond"></div></div>
 
-            <div class="bloque-vidrio animate-in">
+            <div class="bloque-vidrio">
                 <div class="section-heading animate-in delay-1">Confirmación</div>
                 <p class="rsvp-intro animate-in delay-2">Será un honor contar con tu presencia en esta noche tan especial. Por favor confirma tu asistencia.</p>
                 <div class="rsvp-input-wrap animate-in delay-3">
                     <label class="rsvp-input-label" for="guest-name">Nombre Completo</label>
                     <input type="text" id="guest-name" class="rsvp-input" placeholder="Escribe tu nombre aquí…">
                 </div>
-                <div class="rsvp-input-wrap animate-in delay-3">
+                <div class="rsvp-input-wrap animate-in delay-4">
                     <label class="rsvp-input-label" for="guest-status">Asistencia</label>
                     <select id="guest-status" class="rsvp-input" style="appearance: auto;">
                         <option value="Asistiré">¡Sí, ahí estaré!</option>
                         <option value="No podré asistir">No podré asistir</option>
                     </select>
                 </div>
-                <button onclick="sendConfirmationViaWhatsApp()" class="btn-primary animate-in delay-4">
-                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-                    Confirmar por WhatsApp
-                </button>
+                <div class="animate-in delay-5">
+                    <button onclick="sendConfirmationViaWhatsApp()" class="btn-primary">
+                        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                        Confirmar por WhatsApp
+                    </button>
+                </div>
             </div>
 
             <div class="divider-ornate animate-in"><div class="divider-ornate-diamond"></div></div>
 
-            <div class="bloque-vidrio animate-in">
+            <div class="bloque-vidrio">
                 <div class="section-heading animate-in delay-1">Buenos Deseos</div>
                 <p class="rsvp-intro animate-in delay-2">Déjame un mensaje especial para guardar como recuerdo de esta nueva etapa.</p>
                 <form id="wish-form" style="text-align: left;" class="animate-in delay-3" onsubmit="sendWishViaWhatsApp(event)">
@@ -705,7 +718,7 @@
             </div>
 
             <div class="divider-ornate animate-in" style="margin-top:40px;"><div class="divider-ornate-diamond"></div></div>
-            <div class="invitation-footer animate-in">Invytia Premium</div>
+            <div class="invitation-footer text-gold-solid animate-in">Invytia Premium</div>
 
         </div>
     </main>

@@ -243,7 +243,7 @@
             color:var(--text-deep); line-height:1.6; margin-bottom:25px; padding:0 10px; font-weight:400; 
         }
         .family-names { 
-            font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:600; font-style:italic; 
+            font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:600; font-style:italic; 
             line-height:1.4; margin-top:8px; 
         }
         
@@ -251,7 +251,7 @@
             font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 14px; letter-spacing: 2px; 
             color: var(--text-rose); text-transform: uppercase; margin-bottom: 8px; font-weight: 600; 
         }
-        .info-block { margin-bottom: 28px; }
+        .info-block { margin-bottom: 25px; }
 
         .divider-ornate { display:flex; align-items:center; justify-content:center; gap:8px; margin:35px auto; }
         .divider-ornate::before,.divider-ornate::after { content:''; flex:1; height:1px; background:linear-gradient(to right,transparent,rgba(212,175,55,0.6)); }
@@ -398,6 +398,7 @@
         <svg id="music-icon" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
     </button>
 
+    <!-- PANTALLA SOBRE CLARO -->
     <div id="envelope-screen">
         <div id="env-stars"></div>
 
@@ -525,6 +526,7 @@
         <div class="hint-text">Toca para abrir</div>
     </div>
 
+    <!-- MAIN CONTENT -->
     <main id="main-invitation">
         <div id="lanterns-container" style="position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;pointer-events:none;z-index:1;"></div>
 
@@ -549,12 +551,17 @@
             <div class="divider-ornate animate-in delay-5"><div class="divider-ornate-diamond"></div></div>
 
             <div class="info-block">
-                <div class="info-label animate-in delay-1">Con la bendición de Dios y el inmenso amor de mi familia,</div>
-                <div class="family-names text-gold-clip animate-in delay-2">Familia Sánchez Cortez</div>
+                <div class="info-label animate-in delay-1">Con la bendición de Dios y el inmenso amor de mis papás,</div>
+                <div class="family-names text-gold-clip animate-in delay-2" style="font-size: 22px;">Mario Sánchez y Ana Isabel Cortez</div>
+            </div>
+
+            <div class="info-block" style="margin-top: 15px;">
+                <div class="info-label animate-in delay-3">Mis Padrinos</div>
+                <div class="family-names text-gold-clip animate-in delay-4" style="font-size: 22px;">Valentín Sánchez y Sandra Reyes</div>
             </div>
 
             <div class="info-block">
-                <p class="phrase animate-in delay-3" style="font-size: 19px; margin-top: 15px;">
+                <p class="phrase animate-in delay-5" style="font-size: 19px; margin-top: 20px;">
                     tengo el honor de invitarte a celebrar la alegría de mis XV Años.<br><br>
                     Acompáñame a vivir una noche llena de ilusiones, sonrisas y momentos inolvidables, donde agradeceré tu presencia al celebrar esta etapa tan especial de mi vida.
                 </p>
@@ -648,7 +655,11 @@
                     <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                 </div>
                 <p class="rsvp-intro animate-in delay-3" style="margin-top:10px;">
-                    Tu presencia es mi mayor regalo en este día, pero si prefieres darme un obsequio adicional, en efectivo lo apreciaría mucho.
+                    El mayor regalo será contar con tu presencia en este día tan especial.<br><br>
+                    Si además deseas obsequiarme un detalle, un sobre con un regalo en efectivo será recibido con mucho cariño y me ayudará a seguir construyendo mis sueños.
+                </p>
+                <p class="phrase animate-in delay-4" style="font-size: 18px; color: var(--text-rose); margin-bottom: 0;">
+                    "Porque los mejores recuerdos se crean junto a quienes más queremos"
                 </p>
             </div>
 

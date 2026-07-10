@@ -8,7 +8,7 @@
     <style>
         :root {
             /* Paleta Premium Rosa & Dorado */
-            --rosa-bloque: rgba(255, 255, 255, 0.65); /* Más opacidad para mejorar lectura */
+            --rosa-bloque: rgba(255, 255, 255, 0.65); 
             --rosa-bloque-borde: rgba(212, 175, 55, 0.4); 
             --text-deep: #4a2c35;
             --text-rose: #b35066;
@@ -47,11 +47,8 @@
 
         /* ====== CLASES DE MEJORA DE LECTURA (DORADO) ====== */
         .text-gold-clip {
-            background: var(--gold-grad);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            /* Sombra sutil oscura para separar del fondo brillante */
-            filter: drop-shadow(0px 2px 3px rgba(74, 44, 53, 0.3)); 
+            color: var(--gold-accent);
+            text-shadow: 0px 1px 3px rgba(74, 44, 53, 0.3);
         }
         .text-gold-solid {
             color: var(--gold-accent);
@@ -292,7 +289,7 @@
         }
         .cal-day.empty{ opacity:0; pointer-events: none; }
         .cal-day.highlight{
-            background: var(--gold-grad);
+            background: var(--gold-accent);
             color: #fff; font-weight: 600; box-shadow: 0 4px 12px rgba(212,175,55,0.4);
         }
 
@@ -644,7 +641,7 @@
                     <svg viewBox="0 0 24 24"><path d="M12 2L10 8h4l-2-6zM8 9l-2 6h12l-2-6H8zm-3 7v6h14v-6H5z"/></svg>
                 </div>
                 <div style="font-family:'Cinzel',serif;font-size:24px;font-weight:400;letter-spacing:6px;color:var(--text-deep);margin-top:10px;" class="animate-in delay-3">Etiqueta</div>
-                <div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:var(--text-rose);margin-top:12px;line-height:1.6;" class="animate-in delay-4">Te pido amablemente reservar el color palo de rosa para mí.</div>
+                <div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:var(--text-rose);margin-top:12px;line-height:1.6;" class="animate-in delay-4">Te pido amablemente reservar el color rosa pastel para mí.</div>
             </div>
 
             <div class="divider-ornate animate-in"><div class="divider-ornate-diamond"></div></div>

@@ -614,21 +614,21 @@
             <div class="info-block">
                 <p class="phrase animate-in delay-1" style="font-size: 19px; margin-top: 15px;">
                     Con inmensa alegría, te invitamos a acompañarnos en la ceremonia religiosa, que será presidida por mi querido tío, el Padre Luis Gerardo Cortés Ávalos, y celebrada con la especial bendición de mi abuelo Luis Gerardo Cortés Carbajal ✝.<br><br>
-                    La ceremonia tendrá lugar en la Parroquia Asunción de María, ubicada en Oriental S/N, Coapa, Los Cedros, Coyoacán, 04800 Ciudad de México, CDMX, el día 24 de octubre de 2026, a las 4:45 P.M.
+                    La ceremonia tendrá lugar en la Parroquia de Nuestra Señora del Carmen y San José, ubicada en Calz. De Guadalupe 230, Coapa, Prado Coapa, Tlalpan, 14350 Ciudad de México, CDMX, el día 24 de octubre de 2026, a las 4:45 P.M.
                 </p>
             </div>
 
             <div class="divider-ornate animate-in"><div class="divider-ornate-diamond"></div></div>
 
-            <div class="info-block">
+            <div class="bloque-vidrio">
                 <div class="section-heading animate-in delay-1">Ubicaciones</div>
                 
                 <div class="map-section">
                     <div class="map-tipo animate-in delay-2">Ceremonia</div>
-                    <div class="map-nombre animate-in delay-3">Asunción de María</div>
+                    <div class="map-nombre animate-in delay-3">Parroquia de Nuestra Señora del Carmen</div>
                     <div class="map-hora text-gold-solid animate-in delay-4">4:45 P.M.</div>
                     <div class="map-wrapper animate-in delay-5">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.3065736626945!2d-99.1146236!3d19.3124987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce019249651ee5%3A0x9d199266885f4c0e!2sParroquia%20de%20la%20Asunci%C3%B3n%20de%20Santa%20Mar%C3%ADa!5e0!3m2!1ses-419!2smx!4v1783549065300!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.561927294639!2d-99.1346447!3d19.3014077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0060843e5987%3A0x3dc78852c98304ab!2sParroquia%20de%20Nuestra%20Se%C3%B1ora%20del%20Carmen%20y%20San%20Jos%C3%A9!5e0!3m2!1ses-419!2smx!4v1784313567712!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     </div>
                 </div>
                 
@@ -893,7 +893,7 @@
         }
 
         function addToCalendar(){
-            const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//XV Años Alicee Valentina//ES','BEGIN:VEVENT','DTSTART:20261024T164500','DTEND:20261025T020000','SUMMARY:XV Años de Alicee Valentina','DESCRIPTION:Acompáñanos a celebrar los XV Años de Alicee Valentina. Ceremonia (4:45 PM) en Asunción de María y Recepción (7:00 PM) en Salón Eventos Mirage.','LOCATION:Asunción de María / Salón Eventos Mirage','STATUS:CONFIRMED','END:VEVENT','END:VCALENDAR'].join('\r\n');
+            const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//XV Años Alicee Valentina//ES','BEGIN:VEVENT','DTSTART:20261024T164500','DTEND:20261025T020000','SUMMARY:XV Años de Alicee Valentina','DESCRIPTION:Acompáñanos a celebrar los XV Años de Alicee Valentina. Ceremonia (4:45 PM) en Parroquia de Nuestra Señora del Carmen y Recepción (7:00 PM) en Salón Eventos Mirage.','LOCATION:Parroquia de Nuestra Señora del Carmen / Salón Eventos Mirage','STATUS:CONFIRMED','END:VEVENT','END:VCALENDAR'].join('\r\n');
             const a=document.createElement('a');
             a.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar;charset=utf-8'}));
             a.download='XV-Alicee-Valentina.ics';
